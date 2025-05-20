@@ -3,29 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
     <title>Technical Support Interview</title>
     <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+
         #main_container {
-            margin: 0px auto;
+
+            margin: 0px auto ;
+            margin-top: 40px;
             text-align: center;
+            width: 462px;
         }
 
         .container {
             border: 0.9px solid #C8C8C8;
             text-align: left;
-            width: 40%;
-            margin: 15px auto;
+            margin: 15px 0px 15px 0px;
         }
 
         .offers {
-            display: inline-block;
+
             font-size: 12px;
             color: #fff;
-            padding: 2px 7px 2px 7px;
+            padding: 1px 6px 1px 6px;
             background-color: #FF6B82;
+            border-radius: 2px;
         }
 
         .list {
@@ -36,275 +47,326 @@
 
         .price {
             font-size: 14.46px;
+            font-weight: bold;
+            line-height: 0.9;
 
         }
 
         .price1 {
             font-size: 10px;
-            font-weight: 400;
+
             color: #cacaca;
         }
 
         input[type="radio"] {
             filter: hue-rotate(120deg);
             cursor: pointer;
+            margin: 0px;
         }
 
         .hidden_container_style {
             display: grid;
 
-            grid-template-columns: 30% 30%;
+            grid-template-columns: 2px 20px 20px;
         }
 
         .dropdown {
             margin: 10px;
             text-align: center;
         }
-    #add_to_cart::before {
-    
-    }
-    #add_to_cart {
-    height: 40px;
-    width: 40%;
-    background-color: #FF6B82;
-    color: #fff;
-    border: 1px solid #FF6B82;
-    margin: 0px auto;
 
-}
+        #add_to_cart {
+            height: 40px;
+            font-size: 12px;
+            font-weight: 500;
+            width: 462px;
+            border-radius: 4px;
+            background-color: #FF6B82;
+            color: #fff;
+            border: 1px solid #FF6B82;
+            margin: 0px auto;
+
+            &:hover {
+                background-color: #ed4962;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div id="main_container">
         <span>
-            <hr style="width: 13%;text-align: left;display: inline-block;color:#C8C8C8;" />
+            <hr style="width: 150px;text-align: left;display: inline-block;color:#C8C8C8;" />
             <h1 style="display: inline;color:#FF6B82;font-size:20px;">YAY! It’s BOGO</h1>
-            <hr style="width: 13%;text-align: right;display: inline-block;color:#C8C8C8;" ; />
+            <hr style="width: 150px;text-align: right;display: inline-block;color:#C8C8C8;" ; />
         </span>
-        <div class="container cont1">
-            <div style="display: inline-block; width:50% ;margin: 10px; text-align: left;">
-                <input type="radio" style="display: inline-block;" value="unit1" id="unit1_radio" name="product">
+        <div class="container" id="main_container_unit1" style="padding:20px 15px">
+            <div style="display: flex;justify-content: space-between;align-items: center;">
+                <div>
+                    <div style="display:inline-flex;align-items:center;gap:5px">
+                        <input type="radio" value="unit1" id="unit1_radio" name="product">
 
-                <label class="list" for="unit1_radio"  > 1 Unit <p class="offers">10% off</p> </label>
+                        <label class="list" for="unit1_radio"> 1 Unit </label>
+                        <span class="offers">10% off</span>
 
 
-                <p style="font-size: 12px;font-weight: 400; margin-left: 10px;">Standard Price</p>
+                    </div>
+                    <div style="font-size: 12px;font-weight: 400;margin-left:18px">Standard Price</div>
+                </div>
+                <div>
+
+                    <span class="price" style="display:block;">$10.00 USD</span>
+                    <span class="price1"><s>$24.00 USD</s> </span>
+                </div>
+
             </div>
 
-            <div style="display: inline-block;text-align: right; width:40%;margin: 10px;">
 
-                <h1 class="price">$10.00 USD</h1>
-                <P class="price1"><s>$24.00 USD</s> </P>
-            </div>
-            <div class="hidden_container_common_class" id="hidden_container_unit1" style="display: none;">
-                <div class="hidden_container_style">
-                    <div class="dropdown">
-                        <p>Size</p>
-                        <label>#1</label>
-                        <select id="size" style="padding:10px">
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="XL">XL</option>
-                            <option value="L">L</option>
-                            <option value="XXL">XXL</option>
-                        </select>
 
+
+            <div class="hidden_container_common_class" id="hidden_container_unit1"
+                style="display: none;margin-top: 10px;margin-left:16px;">
+                <div>
+                    <div style="display: flex;font-size: 12px;gap:10px">
+                        <div style="width: 10px;"></div>
+                        <div style="width: 72px;">Size</div>
+                        <div style="width: 72px;">Color</div>
                     </div>
-                    <div class="dropdown">
-                        <p>Colour</p>
-                        <select id="color" style="padding:10px">
-                            <option value="red">red</option>
-                            <option value="green">green</option>
-                            <option value="blue">blue</option>
-                            <option value="orange">orange</option>
-                        </select>
+                    <div style="display: flex;gap:10px;align-items: center;">
+                        <span style="font-size: 12px;width: 10px;">#1</span>
+                        <div>
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="XL">XL</option>
+                                <option value="L">L</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div>
 
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="red">red</option>
+                                <option value="green">green</option>
+                                <option value="blue">blue</option>
+                                <option value="orange">orange</option>
 
+                            </select>
+                        </div>
                     </div>
-                    <div class="dropdown">
-                        <label>#2</label>
-                        <select id="size_2" style="padding:10px">
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="XXXL">XXXL</option>
-                            <option value="L">L</option>
-                            <option value="XXL">XXL</option>
-                        </select>
 
+                    <div style="display: flex;gap:10px;align-items: center;margin-top:8px;">
+                        <span style="font-size: 12px;width: 10px;">#2</span>
+                        <div>
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="XL">XL</option>
+                                <option value="L">L</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div>
 
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="red">red</option>
+                                <option value="green">green</option>
+                                <option value="blue">blue</option>
+                                <option value="orange">orange</option>
+
+                            </select>
+                        </div>
                     </div>
-                    <div class="dropdown">
-
-                        <select name="color_2" id="color_2" style="padding:10px">
-                            <option value="red">red</option>
-                            <option value="green">green</option>
-                            <option value="blue">blue</option>
-                            <option value="orange">orange</option>
-                        </select>
 
 
-                    </div>
                 </div>
 
 
             </div>
         </div>
-        <div class="container cont2" id="second_unit">
+        <div class="container" id="main_container_unit2" style="position: relative; padding:20px 15px">
+            <div
+                style="position: absolute;background-color: #FF6B82;color: #fff;top: -7px; right: 5px;text-align: center;width: 110px; border-radius: 0px 0px 4px 4px;font-size:11px;padding:2px 0px">
+                <span>MOST POPULAR</span> </div>
+            <div
+                style="position: absolute; top: -7px; right: -1px; width: 110px; z-index: -1; border-bottom: 7px solid #D7445B; border-left: 6px solid transparent; border-right: 6px solid transparent;">
+            </div>
+            <div style="display: flex;justify-content: space-between;align-items: center;">
+                <div>
+                    <div style="display:inline-flex;align-items:center;gap:5px">
+                        <input type="radio" value="unit2" id="unit2_radio" name="product">
+                        <label class="list" for="unit2_radio"> 2 Unit </label>
+                        <span class="offers">20% off</span>
+                    </div>
 
-            <div style="display: inline-block; width:50% ;margin: 10px; text-align: left;">
-                <input type="radio" style="display: inline-block;" value="unit2" name="product">
+                </div>
+                <div>
 
-                <label class="list"> 2 Unit <p class="offers">20% off</p> </label>
+                    <span class="price" style="display:block;">$18.00 USD</span>
+                    <span class="price1"><s>$24.00 USD</s> </span>
+                </div>
 
-
-                <!-- <p style="font-size: 12px;font-weight: 400; margin-left: 10px;">Standard Price</p> -->
             </div>
 
-            <div style="display: inline-block;text-align: right; width:40%;margin: 10px;">
-
-                <h1 class="price">$18.00 USD</h1>
-                <P class="price1"><s>$24.00 USD</s> </P>
-            </div>
-            <div id="hidden_container_unit2" class="hidden_container_common_class" style="display: none;">
-                <div class="hidden_container_style">
-                    <div class="dropdown">
-                        <p>Size</p>
-                        <label>#1</label>
-                        <select id="size_unit2" style="padding:10px">
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="XL">XL</option>
-                            <option value="L">L</option>
-                            <option value="XXL">XXL</option>
-                        </select>
-
+            <div class="hidden_container_common_class" id="hidden_container_unit2"
+                style="display: none;margin-top: 10px;margin-left:16px;">
+                <div>
+                    <div style="display: flex;font-size: 12px;gap:10px">
+                        <div style="width: 10px;"></div>
+                        <div style="width: 72px;">Size</div>
+                        <div style="width: 72px;">Color</div>
                     </div>
-                    <div class="dropdown">
-                        <p>Colour</p>
-                        <select id="color" style="padding:10px">
-                            <option value="red">red</option>
-                            <option value="green">green</option>
-                            <option value="blue">blue</option>
-                            <option value="orange">orange</option>
-                        </select>
+                    <div style="display: flex;gap:10px;align-items: center;">
+                        <span style="font-size: 12px;width: 10px;">#1</span>
+                        <div>
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="XL">XL</option>
+                                <option value="L">L</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div>
 
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="red">red</option>
+                                <option value="green">green</option>
+                                <option value="blue">blue</option>
+                                <option value="orange">orange</option>
 
+                            </select>
+                        </div>
                     </div>
-                    <div class="dropdown">
-                        <label>#2</label>
-                        <select id="size_2" style="padding:10px">
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="XXXL">XXXL</option>
-                            <option value="L">L</option>
-                            <option value="XXL">XXL</option>
-                        </select>
 
+                    <div style="display: flex;gap:10px;align-items: center;margin-top:8px;">
+                        <span style="font-size: 12px;width: 10px;">#2</span>
+                        <div>
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="XL">XL</option>
+                                <option value="L">L</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div>
 
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="red">red</option>
+                                <option value="green">green</option>
+                                <option value="blue">blue</option>
+                                <option value="orange">orange</option>
+
+                            </select>
+                        </div>
                     </div>
-                    <div class="dropdown">
-
-                        <select name="color_2" id="color_2" style="padding:10px">
-                            <option value="red">red</option>
-                            <option value="green">green</option>
-                            <option value="blue">blue</option>
-                            <option value="orange">orange</option>
-                        </select>
 
 
-                    </div>
                 </div>
 
 
             </div>
         </div>
-        <div class="container cont3" id="third_unit">
-            <div style="display: inline-block; width:50% ;margin: 10px; text-align: left;">
-                <input type="radio" style="display: inline-block;" value="unit3" name="product">
+        <div class="container" id="main_container_unit3" style="padding:20px 15px">
+            <div style="display: flex;justify-content: space-between;align-items: center;">
+                <div>
+                    <div style="display:inline-flex;align-items:center;gap:5px">
+                        <input type="radio" value="unit3" id="unit3_radio" name="product">
+                        <label class="list" for="unit3_radio"> 3 Unit </label>
+                        <span class="offers">30% off</span>
+                    </div>
 
-                <label class="list"> 3 Unit <p class="offers">30% off</p> </label>
+                </div>
+                <div>
 
+                    <span class="price" style="display:block;">$24.00 USD</span>
+                    <span class="price1"><s>$24.00 USD</s> </span>
+                </div>
 
-               
             </div>
-
-            <div style="display: inline-block;text-align: right; width:40%;margin: 10px;">
-
-                <h1 class="price">$24.00 USD</h1>
-                <P class="price1"><s>$24.00 USD</s> </P>
-            </div>
-            <div id="hidden_container_unit3" class="hidden_container_common_class" style="display: none;">
-                <div class="hidden_container_style">
-                    <div class="dropdown">
-                        <p>Size</p>
-                        <label>#1</label>
-                        <select id="size" style="padding:10px">
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="XL">XL</option>
-                            <option value="L">L</option>
-                            <option value="XXL">XXL</option>
-                        </select>
-
+            <div class="hidden_container_common_class" id="hidden_container_unit3"
+                style="display: none;margin-top: 10px;margin-left:16px;">
+                <div>
+                    <div style="display: flex;font-size: 12px;gap:10px">
+                        <div style="width: 10px;"></div>
+                        <div style="width: 72px;">Size</div>
+                        <div style="width: 72px;">Color</div>
                     </div>
-                    <div class="dropdown">
-                        <p>Colour</p>
-                        <select id="color" style="padding:10px">
-                            <option value="red">red</option>
-                            <option value="green">green</option>
-                            <option value="blue">blue</option>
-                            <option value="orange">orange</option>
-                        </select>
+                    <div style="display: flex;gap:10px;align-items: center;">
+                        <span style="font-size: 12px;width: 10px;">#1</span>
+                        <div>
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="XL">XL</option>
+                                <option value="L">L</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div>
 
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="red">red</option>
+                                <option value="green">green</option>
+                                <option value="blue">blue</option>
+                                <option value="orange">orange</option>
 
+                            </select>
+                        </div>
                     </div>
-                    <div class="dropdown">
-                        <label>#2</label>
-                        <select id="size_2" style="padding:10px">
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="XXXL">XXXL</option>
-                            <option value="L">L</option>
-                            <option value="XXL">XXL</option>
-                        </select>
 
+                    <div style="display: flex;gap:10px;align-items: center;margin-top:8px;">
+                        <span style="font-size: 12px;width: 10px;">#2</span>
+                        <div>
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="XL">XL</option>
+                                <option value="L">L</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div>
 
+                            <select style="padding:4px 2px;border:1px solid #c6c6c6;border-radius: 2px;width: 72px;">
+                                <option value="red">red</option>
+                                <option value="green">green</option>
+                                <option value="blue">blue</option>
+                                <option value="orange">orange</option>
+
+                            </select>
+                        </div>
                     </div>
-                    <div class="dropdown">
-
-                        <select name="color_2" id="color_2" style="padding:10px">
-                            <option value="red">red</option>
-                            <option value="green">green</option>
-                            <option value="blue">blue</option>
-                            <option value="orange">orange</option>
-                        </select>
 
 
-                    </div>
                 </div>
 
 
             </div>
 
         </div>
-        <div >
-<div style=" width:27%; display:inline-block;text-align: left;">
+        <div style="margin-bottom:15px ;">
+            <div style="width:48%; display:inline-block;text-align: left;">
 
-    <p style="font-size: 14px;color: #FF6B82;font-weight: 500;margin-left: 10px;">Free Delivery</p>
-    </div >
-<div style="text-align: right; width:14%; display:inline-block">
-        <p style="font-size: 14px;font-weight: 400;">Total:$18.00 USD</p>
+                <span style="font-size: 14px;color: #FF6B82;font-weight: 500;">Free Delivery</span>
+            </div>
+            <div style="text-align: right; width:50%; display:inline-block">
+                <span style="font-size: 14px;font-weight: 500;">Total : $18.00 USD</span>
+            </div>
+        </div>
+
+        <div>
+            <button id="add_to_cart" style="cursor: pointer;"> <span style="font-size: 17px; ">+</span> Add to
+                cart</button>
+        </div>
+        <div style="text-align:right;font-style: italic;color:#00000066;font-size:12px;margin-top:4px">
+            @ Powered by Pumper
+        </div>
+
+
     </div>
-</div>
 
-            <div>
-                <button id="add_to_cart"> <b>+</b> Add to cart</button>
-            </div>
-
-       
-    </div>
-    
     <script>
 
         const radioButtons = document.querySelectorAll('input[name="product"]');
@@ -319,9 +381,16 @@
                     element.style.display = 'none';
                 })
 
+                document.querySelectorAll('.container').forEach((element) => {
+                    element.style.borderColor = '#C8C8C8';
+                    element.style.backgroundColor = 'unset';
+                })
+
                 // Show the relevant content div
                 if (this.checked) {
                     document.getElementById('hidden_container_' + this.value).style.display = 'block';
+                    document.getElementById('main_container_' + this.value).style.borderColor = '#FF6B82';
+                    document.getElementById('main_container_' + this.value).style.backgroundColor = '#FFF9FA';
 
 
                 }
